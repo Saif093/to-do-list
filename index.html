@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="A modern, stylish, and responsive To-Do List web app with local storage and progress tracking." />
+  <meta name="keywords" content="todo list, task manager, HTML CSS JS, local storage, productivity" />
+  <meta name="author" content="Your Name" />
+
+  <title>To-Do App</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="todo-app" aria-label="To-Do Application">
+      <h1>📝 To-Do App</h1>
+
+      <!-- Progress and Stats -->
+      <div class="stat-container">
+        <div class="details">
+          <h3>Keep it Up!</h3>
+          <div id="progressbar" aria-hidden="true">
+            <div id="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+          </div>
+        </div>
+        <div class="stats-number">
+          <p id="numbers" aria-label="Completed tasks">0 / 0</p>
+        </div>
+      </div>
+
+      <!-- Task Input -->
+      <form class="input-area" id="task-form" autocomplete="off" aria-label="Add Task">
+        <label for="task-input" class="sr-only">New Task</label>
+        <input type="text" id="task-input" placeholder="Add a new task..." aria-required="true" />
+        <button type="submit" id="add-task-btn" aria-label="Add Task">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </form>
+
+      <!-- Task List -->
+      <div class="todos-container">
+        <ul id="task-list" aria-label="Task List"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+</body>
+</html>
